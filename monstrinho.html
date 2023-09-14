@@ -166,14 +166,10 @@
 <body>
     <h1>Crie seu Monstrinho</h1>
     <div class="container">
-        <!-- Adicionando campos para o nome, telefone e nome do monstrinho -->
+        <!-- Adicionando campos para o nome e nome do monstrinho (telefone removido) -->
         <div class="form-group">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-        </div>
-        <div class="form-group">
-            <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" required>
         </div>
         <div class="form-group">
             <label for="nomeMonstrinho">Nome do Monstrinho:</label>
@@ -244,7 +240,6 @@
         document.getElementById("criar").addEventListener("click", function() {
             // Obtém os valores inseridos pelo usuário
             var nome = document.getElementById("nome").value;
-            var telefone = document.getElementById("telefone").value;
             var nomeMonstrinho = document.getElementById("nomeMonstrinho").value;
 
             // Obtém os valores selecionados
@@ -252,7 +247,7 @@
             var selectedEyes = document.querySelector('input[name="eyes"]:checked');
 
             // Verifica se todos os campos foram preenchidos
-            if (nome && telefone && nomeMonstrinho && selectedBody && selectedEyes) {
+            if (nome && nomeMonstrinho && selectedBody && selectedEyes) {
                 // Concatena os valores com emojis diretamente
                 var mensagemWhatsApp = "🦄 **Certidão de Doação** 🦄\n\n**Nome do doador:** " + nome + "\n**Nome do monstrinho:** " + nomeMonstrinho + "\n**RG do Monstrinho:** " + selectedBody.value + selectedEyes.value + "\n\n**Obrigado!**";
 
@@ -267,7 +262,6 @@
 
                 // Limpa o formulário após a abertura do WhatsApp
                 document.getElementById("nome").value = "";
-                document.getElementById("telefone").value = "";
                 document.getElementById("nomeMonstrinho").value = "";
                 selectedBody.checked = false;
                 selectedEyes.checked = false;
