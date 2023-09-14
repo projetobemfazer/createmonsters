@@ -9,6 +9,8 @@
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f0f0f0;
+            background: url('https://img.freepik.com/fotos-premium/muitas-ilustracoes-fofas-de-monstrinhos_800563-6992.jpg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
@@ -21,10 +23,18 @@
             height: 100vh;
         }
 
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(61, 247, 89, 0.503);
+            width: 100%;
+            max-width: 400px;
+        }
+
         .form-group {
-            margin-bottom: 20px;
-            max-width: 300px;
-            text-align: left;
+         display: flex;
+         align-items: center;
         }
 
         .form-group label {
@@ -38,26 +48,25 @@
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 4px;
             font-size: 16px;
         }
 
         .options {
             display: flex;
-            flex-direction: row; /* Alteramos a direção para horizontal */
-            margin: 10px;
+            flex-wrap: wrap; /* Permite que as opções se ajustem a tamanhos de tela menores */
+            justify-content: center;
+            margin: 10px -10px; /* Adicione margem negativa para compensar a margem interna nos itens flexíveis */
         }
 
         .option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex: 0 0 calc(33.33% - 20px); /* 33.33% de largura com margem de 10px em ambos os lados */
             margin: 10px;
         }
 
         .option img {
-            max-width: 150px;
-            max-height: 150px;
+            max-width: 100%;
+            height: auto;
             cursor: pointer;
         }
 
@@ -65,34 +74,26 @@
             margin-top: 5px;
         }
 
-        #criar {
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
-            background-color: #007BFF;
+        }
+
+        #criar, #visualizar {
+            background-color: rgba(4, 85, 16, 0.503);
             color: white;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
             font-size: 18px;
             border-radius: 5px;
+            margin-bottom: 10px;
         }
 
-        #criar:hover {
-            background-color: #0056b3;
-        }
-
-        #visualizar {
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-
-        #visualizar:hover {
-            background-color: #45a049;
+        #criar:hover, #visualizar:hover {
+            background-color: rgba(4, 85, 16, 0.503);
         }
 
         .option-title {
@@ -100,13 +101,7 @@
             font-weight: bold;
         }
 
-        /* Adicionamos margem entre as opções de corpo e olhos */
-        .options:nth-child(odd) {
-            margin-right: 20px;
-        }
-
         #resultado {
-            margin-top: 20px;
             font-size: 16px;
         }
 
@@ -164,67 +159,70 @@
     </style>
 </head>
 <body>
-    <h1>Crie seu Monstrinho</h1>
+    <h1 style="color: white;">Crie seu Monstrinho</h1> 
     <div class="container">
         <!-- Adicionando campos para o nome e nome do monstrinho (telefone removido) -->
-        <div class="form-group">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="nome"></label>
+                <input type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="nomeMonstrinho"></label>
+                <input type="text" placeholder= "Nome do Monstrinho " name="nomeMonstrinho" id="nomeMonstrinho"required>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/M1.jpeg" alt="Corpo 1">
+                        <input type="radio" name="body" value="M1">
+                    </label>
+                    <span class="option-title">Corpo 1</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/M2.jpeg" alt="Corpo 2">
+                        <input type="radio" name="body" value="M2">
+                    </label>
+                    <span class="option-title">Corpo 2</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/M2.jpeg" alt="Corpo 3">
+                        <input type="radio" name="body" value="M3">
+                    </label>
+                    <span class="option-title">Corpo 3</span>
+                </div>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O1.jpeg" alt="Olhos 1">
+                        <input type="radio" name="eyes" value="O1">
+                    </label>
+                    <span class="option-title">Olhos 1</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O2.jpeg" alt="Olhos 2">
+                        <input type="radio" name="eyes" value="O2">
+                    </label>
+                    <span class="option-title">Olhos 2</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O3.jpeg" alt="Olhos 3">
+                        <input type="radio" name="eyes" value="O3">
+                    </label>
+                    <span class="option-title">Olhos 3</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="criar">Criar</button>
+                <button id="visualizar">Visualizar Meu Monstrinho</button> <!-- Botão adicional -->
+                <div id="resultado"></div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="nomeMonstrinho">Nome do Monstrinho:</label>
-            <input type="text" id="nomeMonstrinho" name="nomeMonstrinho" required>
-        </div>
-
-        <div class="options">
-            <div class="option">
-                <label>
-                    <img src="https://projetobemfazer.github.io/createmonsters/M1.jpeg" alt="Corpo 1">
-                    <input type="radio" name="body" value="M1">
-                </label>
-                <span class="option-title">Corpo 1</span>
-            </div>
-            <div class="option">
-                <label>
-                    <img src="https://projetobemfazer.github.io/createmonsters/M2.jpeg" alt="Corpo 2">
-                    <input type="radio" name="body" value="M2">
-                </label>
-                <span class="option-title">Corpo 2</span>
-            </div>
-            <div class="option">
-                <label>
-                    <img src="https://projetobemfazer.github.io/createmonsters/M2.jpeg" alt="Corpo 3">
-                    <input type="radio" name="body" value="M3">
-                </label>
-                <span class="option-title">Corpo 3</span>
-            </div>
-        </div>
-        <div class="options">
-            <div class="option">
-                <label>
-                    <img src="https://projetobemfazer.github.io/createmonsters/O1.jpeg" alt="Olhos 1">
-                    <input type="radio" name="eyes" value="O1">
-                </label>
-                <span class="option-title">Olhos 1</span>
-            </div>
-            <div class="option">
-                <label>
-                    <img src="https://projetobemfazer.github.io/createmonsters/O2.jpeg" alt="Olhos 2">
-                    <input type="radio" name="eyes" value="O2">
-                </label>
-                <span class="option-title">Olhos 2</span>
-            </div>
-            <div class="option">
-                <label>
-                    <img src="https://projetobemfazer.github.io/createmonsters/O3.jpeg" alt="Olhos 3">
-                    <input type="radio" name="eyes" value="O3">
-                </label>
-                <span class="option-title">Olhos 3</span>
-            </div>
-        </div>
-        <button id="criar">Criar</button>
-        <button id="visualizar">Visualizar Meu Monstrinho</button> <!-- Botão adicional -->
-        <div id="resultado"></div>
     </div>
 
     <!-- Popup para exibir a imagem do monstrinho -->
@@ -249,7 +247,7 @@
             // Verifica se todos os campos foram preenchidos
             if (nome && nomeMonstrinho && selectedBody && selectedEyes) {
                 // Concatena os valores com emojis diretamente
-                var mensagemWhatsApp = "🦄 **Certidão de Doação** 🦄\n\n**Nome do doador:** " + nome + "\n**Nome do monstrinho:** " + nomeMonstrinho + "\n**RG do Monstrinho:** " + selectedBody.value + selectedEyes.value + "\n\n**Obrigado!**";
+                var mensagemWhatsApp = "👾*Certidão de Doação* 👾\n\nNome do doador: " + nome + "\n👻Nome do monstrinho: " + nomeMonstrinho + "\n🪪RG do Monstrinho: " + selectedBody.value + selectedEyes.value + "\n\n*Obrigado!*";
 
                 // Formate o número de telefone (removendo caracteres não numéricos)
                 var numeroWhatsApp = "16993455523".replace(/\D/g, '');
