@@ -34,23 +34,26 @@
         }
 
         .form-group {
-            display: flex;
-            flex-direction: column; /* Empilhe rótulo e entrada verticalmente */
-            margin-bottom: 10px;
-        }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Aumentei a margem inferior */
+    width: 80%; /* Defina a largura máxima para o formulário */
+    max-width: 350px; /* Largura máxima para telas pequenas */
+    margin: 0 auto; /* Centralize o formulário horizontalmente */
+}
 
-        .form-group label {
-            font-size: 16px; /* Reduzir o tamanho da fonte */
-            font-weight: bold;
-        }
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+}
 
-        .form-group input[type="text"] {
-            width: 100%;
-            padding: 7px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            font-size: 14px; /* Reduzir o tamanho da fonte */
-        }
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 10px; /* Aumentei o padding para tornar a caixa de texto um pouco maior */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
 
         .options {
             display: flex;
@@ -160,7 +163,7 @@
     <h1 style="color: white;">Crie seu Monstrinho</h1> 
     <div class="container">
         <div class="imagem-container">
-            <img src="https://projetobemfazer.github.io/createmonsters/Design_sem_nome-removebg-preview.png" alt="Imagem do Monstrinho">
+            <img src="../Monstrinho/Imagens/Design_sem_nome-removebg-preview.png" alt="Imagem do Monstrinho">
         </div>
         <div class="form-container">
             <div class="form-group">
