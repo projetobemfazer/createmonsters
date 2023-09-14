@@ -19,35 +19,29 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 89vh;
+            min-height: 100vh; /* Use min-height para cobrir toda a tela */
         }
 
         .form-container {
-    background-color: #ABA4E4; /* Cor #8379CF com 80% de transparência */
-    padding: 20px;
-    border-radius: 10px;
+            background-color: #ABA4E4;
+            padding: 10px; /* Reduzir o padding */
+            border-radius: 10px;
+            width: 80%; /* Usar largura relativa */
+            max-width: 500px; /* Limitar a largura máxima */
+            margin: 0 auto;
+            overflow: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
 
-    margin: 0 auto; /* Centralize o formulário horizontalmente */
-    overflow: auto; /* Adicione rolagem se o conteúdo for maior do que a área definida */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra na borda */
-}
-
-
-
-
-
-
-.form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Adiciona 10px de espaçamento inferior */
-}
+        .form-group {
+            display: flex;
+            flex-direction: column; /* Empilhe rótulo e entrada verticalmente */
+            margin-bottom: 10px;
+        }
 
         .form-group label {
-            display: block;
-            font-size: 18px;
+            font-size: 16px; /* Reduzir o tamanho da fonte */
             font-weight: bold;
-            margin-bottom: 5px;
         }
 
         .form-group input[type="text"] {
@@ -55,19 +49,19 @@
             padding: 7px;
             border: 1px solid #ccc;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 14px; /* Reduzir o tamanho da fonte */
         }
 
         .options {
             display: flex;
-            flex-wrap: wrap; /* Permite que as opções se ajustem a tamanhos de tela menores */
+            flex-wrap: wrap;
             justify-content: center;
-            margin: 10px -10px; /* Adicione margem negativa para compensar a margem interna nos itens flexíveis */
+            margin: 10px -5px; /* Reduzir a margem */
         }
 
         .option {
-            flex: 0 0 calc(33.33% - 20px); /* 33.33% de largura com margem de 10px em ambos os lados */
-            margin: 10px;
+            flex: 0 0 calc(33.33% - 10px); /* Reduzir a largura com margem menor */
+            margin: 5px; /* Reduzir a margem */
         }
 
         .option img {
@@ -93,7 +87,7 @@
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px; /* Reduzir o tamanho da fonte */
             border-radius: 5px;
             margin-bottom: 10px;
         }
@@ -103,24 +97,22 @@
         }
 
         .option-title {
-            font-size: 18px;
+            font-size: 16px; /* Reduzir o tamanho da fonte */
             font-weight: bold;
         }
 
         #resultado {
-            font-size: 16px;
+            font-size: 14px; /* Reduzir o tamanho da fonte */
         }
 
-        /* Estilize a imagem na nova janela */
         .resultado-imagem {
-            max-width: 100%; /* Defina o tamanho máximo como 100% para ajustar automaticamente */
-            height: auto; /* Mantém a proporção da imagem */
+            max-width: 100%;
+            height: auto;
             margin-bottom: 10px;
             border: 2px solid #007BFF;
             border-radius: 10px;
         }
 
-        /* Estilo para o popup */
         #popup {
             display: none;
             position: fixed;
