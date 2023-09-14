@@ -201,21 +201,6 @@
 
                 // Exiba uma mensagem de sucesso para o usuário
                 document.getElementById("resultado").innerText = "Dados enviados para o WhatsApp!";
-
-                // Capture uma captura de tela da área do monstrinho
-                html2canvas(document.querySelector(".resultado-imagem")).then(function(canvas) {
-                    // Converta a captura de tela para uma imagem PNG
-                    var imagemMonstrinho = canvas.toDataURL("image/png");
-
-                    // Crie um link de download para a imagem
-                    var linkDownload = document.createElement("a");
-                    linkDownload.href = imagemMonstrinho;
-                    linkDownload.download = "monstrinho.png";
-                    linkDownload.style.display = "none"; // Oculta o link
-                    document.body.appendChild(linkDownload); // Adiciona o link ao corpo do documento
-                    linkDownload.click(); // Simula o clique no link
-                    document.body.removeChild(linkDownload); // Remove o link após o download
-                });
             } else {
                 alert("Por favor, preencha todos os campos e selecione um corpo e olhos antes de criar seu monstrinho.");
             }
