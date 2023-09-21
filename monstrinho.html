@@ -193,22 +193,46 @@
                         <img src="https://projetobemfazer.github.io/createmonsters/M1.jpg" alt="Corpo 1">
                         <input type="radio" name="body" value="M1">
                     </label>
-                    <span class="option-title">Corpo 1</span>
+                    <span class="option-title">Corpinho 1</span>
                 </div>
                 <div class="option">
                     <label>
                         <img src="https://projetobemfazer.github.io/createmonsters/M2.jpg" alt="Corpo 2">
                         <input type="radio" name="body" value="M2">
                     </label>
-                    <span class="option-title">Corpo 2</span>
+                    <span class="option-title">Corpinho 2</span>
                 </div>
                 <div class="option">
                     <label>
                         <img src="https://projetobemfazer.github.io/createmonsters/M3.jpg" alt="Corpo 3">
                         <input type="radio" name="body" value="M3">
                     </label>
-                    <span class="option-title">Corpo 3</span>
+                    <span class="option-title">Corpinho 3</span>
                 </div>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O1.jpg" alt="C">
+                        <input type="radio" name="Clothing" value="O1">
+                    </label>
+                    <span class="option-title">Roupinha 1</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O2.jpg" alt="Olhos 2">
+                        <input type="radio" name="Clothing" value="O2">
+                    </label>
+                    <span class="option-title">Roupinha 2</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O3.jpg" alt="Olhos 3">
+                        <input type="radio" name="Clothing" value="O3">
+                    </label>
+                    <span class="option-title">Roupinha 3</span>
+                </div>
+                
             </div>
             <div class="options">
                 <div class="option">
@@ -216,22 +240,69 @@
                         <img src="https://projetobemfazer.github.io/createmonsters/O1.jpg" alt="Olhos 1">
                         <input type="radio" name="eyes" value="O1">
                     </label>
-                    <span class="option-title">Olhos 1</span>
+                    <span class="option-title">Olhinhos 1</span>
                 </div>
                 <div class="option">
                     <label>
                         <img src="https://projetobemfazer.github.io/createmonsters/O2.jpg" alt="Olhos 2">
                         <input type="radio" name="eyes" value="O2">
                     </label>
-                    <span class="option-title">Olhos 2</span>
+                    <span class="option-title">Olhinhos 2</span>
                 </div>
                 <div class="option">
                     <label>
                         <img src="https://projetobemfazer.github.io/createmonsters/O3.jpg" alt="Olhos 3">
                         <input type="radio" name="eyes" value="O3">
                     </label>
-                    <span class="option-title">Olhos 3</span>
+                    <span class="option-title">Olhinhos 3</span>
                 </div>
+                
+            </div>
+            <div class="options">
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O1.jpg" alt="Olhos 1">
+                        <input type="radio" name="lips" value="O1">
+                    </label>
+                    <span class="option-title">Boquinha 1</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O2.jpg" alt="Olhos 2">
+                        <input type="radio" name="lips" value="O2">
+                    </label>
+                    <span class="option-title">Boquinha 2</span>
+                </div>
+                <div class="option">
+                    <label>
+                        <img src="https://projetobemfazer.github.io/createmonsters/O3.jpg" alt="Olhos 3">
+                        <input type="radio" name="lips" value="O3">
+                    </label>
+                    <span class="option-title">Boquinha 3</span>
+                </div>
+                <div class="options">
+                    <div class="option">
+                        <label>
+                            <img src="https://projetobemfazer.github.io/createmonsters/O1.jpg" alt="Olhos 1">
+                            <input type="radio" name="Accessory" value="O1">
+                        </label>
+                        <span class="option-title">Acessório 1</span>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <img src="https://projetobemfazer.github.io/createmonsters/O2.jpg" alt="Olhos 2">
+                            <input type="radio" name="Accessory" value="O2">
+                        </label>
+                        <span class="option-title">Acessório 2</span>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <img src="https://projetobemfazer.github.io/createmonsters/O3.jpg" alt="Olhos 3">
+                            <input type="radio" name="Accessory" value="O3">
+                        </label>
+                        <span class="option-title">Acessório 3</span>
+                    </div>
+                
             </div>
             <div class="buttons">
                 <button id="criar">Criar</button>
@@ -263,7 +334,7 @@
             // Verifica se todos os campos foram preenchidos
             if (nome && nomeMonstrinho && selectedBody && selectedEyes) {
                 // Concatena os valores com emojis diretamente
-                var mensagemWhatsApp = "👾*Certidão de Doação* 👾\n\nNome do doador: " + nome + "\n👻Nome do monstrinho: " + nomeMonstrinho + "\n🪪👻RG do Monstrinho: " + selectedBody.value + selectedEyes.value + "\n\n*Obrigado!*";
+                var mensagemWhatsApp = "👾Certidão de Doação 👾\n\nNome do doador: " + nome + "\n👻Nome do monstrinho: " + nomeMonstrinho + "\n🪪👻RG do Monstrinho: " + selectedBody.value + selectedEyes.value + "\n\n*Obrigado!*";
 
                 // Formate o número de telefone (removendo caracteres não numéricos)
                 var numeroWhatsApp = "16993455523".replace(/\D/g, '');
