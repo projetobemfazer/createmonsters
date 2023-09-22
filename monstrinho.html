@@ -14,7 +14,7 @@
             padding: 0;
         }
         img {
-             border-radius: 10px;
+            border-radius: 10px;
         }
 
         .container {
@@ -37,27 +37,27 @@
         }
 
         .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px; /* Aumentei a margem inferior */
-    width: 80%; /* Defina a largura máxima para o formulário */
-    max-width: 350px; /* Largura máxima para telas pequenas */
-    margin: 0 auto; /* Centralize o formulário horizontalmente */
-}
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px; /* Aumentei a margem inferior */
+            width: 80%; /* Defina a largura máxima para o formulário */
+            max-width: 350px; /* Largura máxima para telas pequenas */
+            margin: 0 auto; /* Centralize o formulário horizontalmente */
+        }
 
-.form-group label {
-    font-size: 16px;
-    font-weight: bold;
-}
+        .form-group label {
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-.form-group input[type="text"] {
-    width: 100%;
-    padding: 10px; /* Aumentei o padding para tornar a caixa de texto um pouco maior */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px; /* Aumentei o padding para tornar a caixa de texto um pouco maior */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
 
         .options {
             display: flex;
@@ -97,8 +97,9 @@
             font-size: 16px; /* Reduzir o tamanho da fonte */
             border-radius: 5px;
             margin-bottom: 10px;
-            transform: translatey(55px);
+            transform: translateY(55px);
         }
+
         #visualizar {
             background-color: rgba(4, 85, 16, 0.503);
             color: white;
@@ -108,8 +109,9 @@
             font-size: 16px; /* Reduzir o tamanho da fonte */
             border-radius: 5px;
             margin-bottom: 10px;
-            transform: translatey(-40px);
+            transform: translateY(-40px);
         }
+
         #criar:hover, #visualizar:hover {
             background-color: rgba(4, 85, 16, 0.503);
         }
@@ -172,143 +174,155 @@
         #fechar-popup:hover {
             background-color: #d32f2f;
         }
+
+        .separador {
+            margin: 20px 0; /* Adicione margem para separação vertical */
+            border: none;
+            border-top: 1px solid #555; /* Estilo da linha */
+        }
     </style>
 </head>
 <body>
-        <div class="imagem-container">
-            <img src="https://projetobemfazer.github.io/createmonsters/Design_sem_nome__1_-removebg-preview.png" alt="Imagem do Monstrinho">
+    <div class="imagem-container">
+        <img src="https://projetobemfazer.github.io/createmonsters/Design_sem_nome__1_-removebg-preview.png" alt="Imagem do Monstrinho">
+    </div>
+    <div class="form-container">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
         </div>
-        <div class="form-container">
-            <div class="form-group">
-                <label for="nome"></label>
-                <input type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
+        <div class="form-group">
+            <label for="nomeMonstrinho">Nome do Monstrinho:</label>
+            <input type="text" placeholder="Nome do Monstrinho" name="nomeMonstrinho" id="nomeMonstrinho" required>
+        </div>
+        <div class="options">
+            <!-- Opções de corpo -->
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/C1.png" alt="Corpo 1">
+                    <input type="radio" name="body" value="C1">
+                </label>
+                <span class="option-title">Corpinho 1</span>
             </div>
-            <div class="form-group">
-                <label for="nomeMonstrinho"></label>
-                <input type="text" placeholder= "Nome do Monstrinho " name="nomeMonstrinho" id="nomeMonstrinho"required>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/C2.png" alt="Corpo 2">
+                    <input type="radio" name="body" value="C2">
+                </label>
+                <span class="option-title">Corpinho 2</span>
             </div>
-            <div class="options">
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/C1.png" alt="Corpo 1">
-                        <input type="radio" name="body" value="C1">
-                    </label>
-                    <span class="option-title">Corpinho 1</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/C2.png" alt="Corpo 2">
-                        <input type="radio" name="body" value="C2">
-                    </label>
-                    <span class="option-title">Corpinho 2</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/C3.png" alt="Corpo 3">
-                        <input type="radio" name="body" value="C3">
-                    </label>
-                    <span class="option-title">Corpinho 3</span>
-                </div>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/C3.png" alt="Corpo 3">
+                    <input type="radio" name="body" value="C3">
+                </label>
+                <span class="option-title">Corpinho 3</span>
             </div>
-            <div class="options">
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/R1.png" alt="Roupinha 1">
-                        <input type="radio" name="Clothing" value="R1">
-                    </label>
-                    <span class="option-title">Roupinha 1</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/R2.png" alt="Roupinha 2">
-                        <input type="radio" name="Clothing" value="R2">
-                    </label>
-                    <span class="option-title">Roupinha 2</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/R3.png" alt="Roupinha 3">
-                        <input type="radio" name="Clothing" value="R3">
-                    </label>
-                    <span class="option-title">Roupinha 3</span>
-                </div>
-                
+        </div>
+        <hr class="separador">
+        <div class="options">
+            <!-- Opções de roupa -->
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/R1.png" alt="Roupinha 1">
+                    <input type="radio" name="Clothing" value="R1">
+                </label>
+                <span class="option-title">Roupinha 1</span>
             </div>
-            <div class="options">
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/O1.png" alt="Olhos 1">
-                        <input type="radio" name="eyes" value="O1">
-                    </label>
-                    <span class="option-title">Olhinhos 1</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/O2.png" alt="Olhos 2">
-                        <input type="radio" name="eyes" value="O2">
-                    </label>
-                    <span class="option-title">Olhinhos 2</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/O3.png" alt="Olhos 3">
-                        <input type="radio" name="eyes" value="O3">
-                    </label>
-                    <span class="option-title">Olhinhos 3</span>
-                </div>
-                
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/R2.png" alt="Roupinha 2">
+                    <input type="radio" name="Clothing" value="R2">
+                </label>
+                <span class="option-title">Roupinha 2</span>
             </div>
-            <div class="options">
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/B1.png" alt="Boquinha 1">
-                        <input type="radio" name="lips" value="B1">
-                    </label>
-                    <span class="option-title">Boquinha 1</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/B2.png" alt="Boquinha 2">
-                        <input type="radio" name="lips" value="B2">
-                    </label>
-                    <span class="option-title">Boquinha 2</span>
-                </div>
-                <div class="option">
-                    <label>
-                        <img src="https://projetobemfazer.github.io/createmonsters/Const/B3.png" alt="Boquinha 3">
-                        <input type="radio" name="lips" value="B3">
-                    </label>
-                    <span class="option-title">Boquinha 3</span>
-                </div>
-                <div class="options">
-                    <div class="option">
-                        <label>
-                            <img src="https://projetobemfazer.github.io/createmonsters/Const/A1.png" alt="Acessorio 1">
-                            <input type="radio" name="Accessory" value="A1">
-                        </label>
-                        <span class="option-title">Acessório 1</span>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <img src="https://projetobemfazer.github.io/createmonsters/Const/A2.png" alt="Acessorio 2">
-                            <input type="radio" name="Accessory" value="A2">
-                        </label>
-                        <span class="option-title">Acessório 2</span>
-                    </div>
-                    <div class="option">
-                        <label>
-                            <img src="https://projetobemfazer.github.io/createmonsters/Const/A3.png" alt="Acessorio 3">
-                            <input type="radio" name="Accessory" value="A3">
-                        </label>
-                        <span class="option-title">Acessório 3</span>
-                    </div>
-                
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/R3.png" alt="Roupinha 3">
+                    <input type="radio" name="Clothing" value="R3">
+                </label>
+                <span class="option-title">Roupinha 3</span>
             </div>
-            <div class="buttons">
-                <button id="criar">Criar</button>
-                <button id="visualizar">Visualizar Meu Monstrinho</button> <!-- Botão adicional -->
-                <div id="resultado"></div>
+        </div>
+        <hr class="separador">
+        <div class="options">
+            <!-- Opções de olho -->
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/O1.png" alt="Olhos 1">
+                    <input type="radio" name="eyes" value="O1">
+                </label>
+                <span class="option-title">Olhinhos 1</span>
             </div>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/O2.png" alt="Olhos 2">
+                    <input type="radio" name="eyes" value="O2">
+                </label>
+                <span class="option-title">Olhinhos 2</span>
+            </div>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/O3.png" alt="Olhos 3">
+                    <input type="radio" name="eyes" value="O3">
+                </label>
+                <span class="option-title">Olhinhos 3</span>
+            </div>
+        </div>
+        <hr class="separador">
+        <div class="options">
+            <!-- Opções de boca -->
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/B1.png" alt="Boquinha 1">
+                    <input type="radio" name="lips" value="B1">
+                </label>
+                <span class="option-title">Boquinha 1</span>
+            </div>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/B2.png" alt="Boquinha 2">
+                    <input type="radio" name="lips" value="B2">
+                </label>
+                <span class="option-title">Boquinha 2</span>
+            </div>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/B3.png" alt="Boquinha 3">
+                    <input type="radio" name="lips" value="B3">
+                </label>
+                <span class="option-title">Boquinha 3</span>
+            </div>
+        </div>
+        <hr class="separador">
+        <div class="options">
+            <!-- Opções de acessório -->
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/A1.png" alt="Acessorio 1">
+                    <input type="radio" name="Accessory" value="A1">
+                </label>
+                <span class="option-title">Acessório 1</span>
+            </div>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/A2.png" alt="Acessorio 2">
+                    <input type="radio" name="Accessory" value="A2">
+                </label>
+                <span class="option-title">Acessório 2</span>
+            </div>
+            <div class="option">
+                <label>
+                    <img src="https://projetobemfazer.github.io/createmonsters/Const/A3.png" alt="Acessorio 3">
+                    <input type="radio" name="Accessory" value="A3">
+                </label>
+                <span class="option-title">Acessório 3</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="criar">Criar</button>
+            <button id="visualizar">Visualizar Meu Monstrinho</button> <!-- Botão adicional -->
+            <div id="resultado"></div>
         </div>
     </div>
 
@@ -352,8 +366,14 @@
                 // Limpa o formulário após a abertura do WhatsApp
                 document.getElementById("nome").value = "";
                 document.getElementById("nomeMonstrinho").value = "";
-                selectedBody.checked = false;
-                selectedEyes.checked = false;
+                var selectedBodyElements = document.querySelectorAll('input[name="body"]');
+                selectedBodyElements.forEach(function(element) {
+                    element.checked = false;
+                });
+                var selectedEyesElements = document.querySelectorAll('input[name="eyes"]');
+                selectedEyesElements.forEach(function(element) {
+                    element.checked = false;
+                });
 
                 // Exiba uma mensagem de sucesso para o usuário
                 document.getElementById("resultado").innerText = "Dados enviados para o WhatsApp!";
@@ -370,8 +390,6 @@
             var selectedEyes = document.querySelector('input[name="eyes"]:checked').value;
             var selectedlips = document.querySelector('input[name="lips"]:checked').value;
             var selectedAccessory = document.querySelector('input[name="Accessory"]:checked').value;
-
-
 
             // Construa o nome do arquivo da imagem com base nas seleções
             var nomeImagemMonstrinho = selectedBody + selectedClothing + selectedEyes + selectedlips + selectedAccessory +".jpeg";
@@ -393,4 +411,3 @@
     </script>
 </body>
 </html>
-
